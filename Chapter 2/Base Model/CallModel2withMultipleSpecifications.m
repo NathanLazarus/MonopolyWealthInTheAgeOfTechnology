@@ -46,7 +46,7 @@ if shock == "historical"
     output = NaN([33 output_vars N]);
 end
 tic
-for i = 1:N
+parfor i = 1:N
     LAMBDAP = LAMBDAPs(i);
     order = orders(i);
     randomseq = randomseqs(i);

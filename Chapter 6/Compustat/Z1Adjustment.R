@@ -92,7 +92,7 @@ setkey(industry_year_PPE_aggregates,calendaryear,twodigitsic)
 fwrite(industry_year_PPE_aggregates[,.(realestate_categorized,uncategorized,total,desired_real_estate_share,sector_re_share,calendaryear,twodigitsic)],
        'real_estate_equipment_to_weight.csv',col.names = T)
 
-shell('real_estate_equipment_weights.py')
+shell('python real_estate_equipment_weights.py')
 
 optimal_real_estate_weights = fread('Optimal_real_estate_equipment_Weights.csv')
 optimal_real_estate_weights[,twodigitsic := as.character(twodigitsic)]
@@ -287,7 +287,7 @@ pctsbyfin[,adjustment_if_categories_matched_up := InventoriesTotal*Inventoriesad
 fwrite(pctsbyfin[financial==0,.(InventoriesTotal,realestate,equipment,IntellectualProperty,Inventoriesadjustment,RealEstateadjustment,Equipmentadjustment,IPadjustment,AllAssetsadjustment)],
        'asset_pcts_and_Z1_weights.csv',col.names = F)
 
-shell('OptimalZ1Weights.py')
+shell('python OptimalZ1Weights.py')
 
 optimalweights = fread('OptimalZ1Weights.csv')
 

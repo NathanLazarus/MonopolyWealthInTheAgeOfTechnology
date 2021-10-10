@@ -33,7 +33,7 @@ output_vars = 10;
 hardcode_irf_T = 100;
 output = NaN([hardcode_irf_T output_vars N]);
 tic
-for i = 1:N
+parfor i = 1:N
     LAMBDAP = LAMBDAPs(i);
     MultiplicativeU = multUs(i);
     shock = shocks(i);

@@ -1,5 +1,5 @@
 This folder contains the code that runs the simulations in Chapter 2. By default, it
-computes fourth order perturbation methods coefficients using the Mathematica notebook
+computes fourth order coefficients using perturbation methods with the Mathematica notebook
 "Model2VariableUtilityFunctions.nb", which are stored in the folder "MathematicaCoefs".
 
 If you don't have Mathematica, or would rather compute the coefficients more quickly,

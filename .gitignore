@@ -1,0 +1,16 @@
+*.dta
+*coefs1.csv
+*coefs2.csv
+*coefs3.csv
+*coefs4.csv
+*.xlsx
+*.rds
+*.zip
+*.xlsm
+*.smcl
+.Rhistory
+casadi-windows-matlabR2016a-v3.5.5
+renv
+*CompustatPassword.csv
+*FRED APIkey.csv
+.Rproj.user

@@ -1,0 +1,20 @@
+# Survival.sub
+
+
+universe                = docker
+docker_image            = nathanlazarus/pythonnumpycasadi:v5
+executable              = python
+transfer_executable     = False
+arguments               = /code/NoOptCondorUtilitiesAndSurvival.py $(Process)
+should_transfer_files   = YES
+when_to_transfer_output = ON_EXIT
+error                   = outfiles/NoOptUtilitiesAndSurvival_$(Process).err
+output                  = outfiles/NoOptUtilitiesAndSurvival_$(Process).out
+log                     = outfiles/NoOptUtilitiesAndSurvival.log
+request_cpus            = 1
+max_retries             = 10
+periodic_release        = (HoldReasonCode == 35) && (NumJobStarts < 10)
+
+request_disk            = 1GB
+request_memory          = 1GB
+queue 300
